@@ -65,6 +65,9 @@ body {
 .player__controls > * {
   flex: 1;
 }
+.player:hover .progress {
+  height: 15px;
+}
 .progress {
   flex: 10;
   position: relative;
@@ -75,9 +78,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
   cursor: ew-resize;
 }
-.player:hover .progress__filled {
-  height: 15px;
-}
+
 .progress__filled {
   width: 50%;
   background: #ffc600;
