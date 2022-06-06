@@ -6,6 +6,7 @@ const progressBar = player.querySelector(".progress__filled");
 const toggle = player.querySelector(".toggle");
 const skipButtons = player.querySelectorAll("[data-skip]");
 const ranges = player.querySelectorAll(".player__slider");
+const fullScreen = player.querySelector(".fullScreen");
 
 // function
 function togglePlay() {
@@ -64,4 +65,10 @@ progress.addEventListener("mouseup", () => (mouseDown = false));
 
 skipButtons.forEach(function (skip) {
   skip.addEventListener("click", handleSkip);
+});
+
+fullScreen.addEventListener("click", (e) => {
+  if (video.requestFullscreen) {
+    video.requestFullscreen();
+  }
 });
